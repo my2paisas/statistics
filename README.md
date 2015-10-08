@@ -1,2 +1,2 @@
 # statistics
-All statistics related stuff
+All statistics related programs and files
