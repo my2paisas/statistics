@@ -45,8 +45,13 @@ for i in xrange(0, sample_size):
     # count in thousands for ease of plot in histogram
     random_salaries.append(random_salary / 1000)
 
+# bins for the histogram are the interval end points
+bins = [low / 1000 for low, high, percent in low_high_percents]
+# add the right most end of the histogram's x-axis i.e. the highest salary
+bins.append(low_high_percents[-1][1] / 1000)
+
 # plot the histogram; normed=True makes y-axis as probability
-plt.hist(random_salaries, bins=[low / 1000 for low, high, percent in low_high_percents], normed=True)
+plt.hist(random_salaries, bins=bins, normed=True)
 plt.title("Income Levels")
 plt.xlabel("Income (in thousands of dollars)")
 plt.ylabel("Probability per thousand dollars")
