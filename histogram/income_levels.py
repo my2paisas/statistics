@@ -12,6 +12,7 @@ sample_size = 100000
 
 # last row changed to assume max income of 60000
 # endpoint convention: left included, right excluded
+# (Note: the percents add to 101 due to rounding)
 low_high_percents = [(0, 1000, 1),
                      (1000, 2000, 2),
                      (2000, 3000, 3),
